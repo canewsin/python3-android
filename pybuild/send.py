@@ -12,7 +12,8 @@ target_destdir = '/data/local/tmp/python3'
 def send_package(pkgname):
     target_tarball_path = '/data/local/tmp/python3-android.tar.bz2'
     target_tarball_name = os.path.basename(target_tarball_path)
-    run_in_dir(['tar', 'jcvf', target_tarball_name, 'sysroot'], cwd=Package.SYSROOT.parent)
+    from .env import target_arch
+    run_in_dir(['tar', 'jcvf', target_tarball_name, 'sysroot/' + target_arch ], cwd=Package.SYSROOT.parent)
     run_in_dir(['adb', 'push', str(Package.SYSROOT.parent / target_tarball_name), target_tarball_path])
 
 

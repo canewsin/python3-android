@@ -15,8 +15,9 @@ from .util import (
 
 
 class BasePackage:
+    from .env import target_arch
     BUILDDIR = BASE / 'build'
-    SYSROOT = BUILDDIR / 'sysroot'
+    SYSROOT = BUILDDIR / 'sysroot' / target_arch
 
     _VERSIONS: Dict[str, str] = {}
 

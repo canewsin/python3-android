@@ -39,4 +39,9 @@ def build_package(pkgname: str) -> None:
 def main():
     logging.basicConfig(level=logging.DEBUG)
 
+    #for arch in ('arm', 'arm64', 'x86', 'x86_64', ''):
+    #    from .env import set_arch, target_arch
+    #    set_arch(arch)
+    #    if target_arch.__len__() != 0:
+    #        print(target_arch)
     build_package('python')

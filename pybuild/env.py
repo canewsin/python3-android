@@ -1,5 +1,11 @@
-target_arch = 'arm'
+target_arch = 'arm64'
 android_api_level = 21
+
+
+def set_arch(name):
+    global target_arch
+    target_arch = name
+
 
 # Python optional modules.
 # Available:
@@ -13,8 +19,8 @@ android_api_level = 21
 #  libffi - enable the ctypes module
 #  zlib - enable the zlib module
 #  libuuid - enable the _uuid module
-#  tools - some handy utility scripts from ./devscripts
-packages = ('openssl', 'ncurses', 'readline', 'sqlite', 'bzip2', 'xz', 'gdbm', 'libffi', 'zlib', 'libuuid', 'tools')
+#  tools - some handy utility scripts from ./devscripts 'ncurses', 'readline', 
+packages = ('openssl', 'sqlite', 'bzip2', 'xz', 'gdbm', 'libffi', 'zlib', 'libuuid', 'tools')
 
 # Enable GPG signature verification on source tarballs and patches?
-verify_source = True
+verify_source = False
