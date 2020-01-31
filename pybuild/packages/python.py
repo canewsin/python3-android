@@ -7,7 +7,7 @@ from ..util import target_arch
 
 class PythonSource(GitSource):
     def __init__(self):
-        super().__init__('https://github.com/python/cpython/')
+        super().__init__('https://github.com/python/cpython/', branch=3.8)
 
     def get_version(self):
         if not self._version and self.source_dir.exists():
