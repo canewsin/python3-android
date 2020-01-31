@@ -26,7 +26,7 @@ class Python(Package):
     source = PythonSource()
     patches = [
         LocalPatch('cppflags'),
-        LocalPatch('unversioned-library'),
+        #LocalPatch('unversioned-library'),
         LocalPatch('skip-build'),
         LocalPatch('lld-compatibility'),
     ]
