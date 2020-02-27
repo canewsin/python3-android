@@ -47,7 +47,7 @@ class Python(Package):
         self.run_with_env([
             './configure',
             '--prefix=/usr',
-            #'--enable-shared',
+            '--enable-shared',
             '--host=' + target_arch().ANDROID_TARGET,
             # CPython requires explicit --build
             '--build=x86_64-linux-gnu',

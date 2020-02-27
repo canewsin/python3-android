@@ -1,4 +1,4 @@
-target_arch = 'arm'
+target_arch = 'arm64'
 android_api_level = 21
 
 # Python optional modules.
@@ -17,4 +17,4 @@ android_api_level = 21
 packages = ('openssl', 'ncurses', 'readline', 'sqlite', 'bzip2', 'xz', 'gdbm', 'libffi', 'zlib', 'libuuid', 'tools')
 
 # Enable GPG signature verification on source tarballs and patches?
-verify_source = True
+verify_source = False #True
